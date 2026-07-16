@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdul Rehman · Materials Engineer · Researcher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Header Section - Centered */
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eaecef;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #2c6b9e;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #1a3a5a;
+            margin-bottom: 0.3rem;
+        }
+
+        .header .title {
+            font-size: 1rem;
+            color: #2c6b9e;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .badges {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 1.2rem;
+            background-color: #f0f4f8;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            color: #1a3a5a;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: 1px solid #d0ddee;
+        }
+
+        .badge:hover {
+            background-color: #dce6f2;
+            transform: translateY(-2px);
+            border-color: #2c6b9e;
+        }
+
+        /* Navigation Links */
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eaecef;
+        }
+
+        .nav-links a {
+            color: #2c6b9e;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .left-column {
+            flex: 2;
+        }
+
+        .right-column {
+            flex: 1;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1a3a5a;
+            border-bottom: 2px solid #2c6b9e;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            color: #444;
+        }
+
+        /* News Items */
+        .news-item {
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #2c6b9e;
+        }
+
+        .news-date {
+            font-weight: 600;
+            color: #1a3a5a;
+            font-size: 0.85rem;
+        }
+
+        .news-text {
+            color: #444;
+            font-size: 0.9rem;
+        }
+
+        .news-text strong {
+            color: #2c6b9e;
+        }
+
+        /* Honors Items */
+        .honor-item {
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+        }
+
+        .honor-title {
+            font-weight: 600;
+            color: #1a3a5a;
+            font-size: 0.9rem;
+        }
+
+        .honor-detail {
+            color: #6a7e94;
+            font-size: 0.85rem;
+        }
+
+        /* Certification Items */
+        .cert-item {
+            margin-bottom: 0.75rem;
+            padding-left: 0.5rem;
+            border-left: 2px solid #e0e8ef;
+        }
+
+        .cert-name {
+            font-weight: 600;
+            color: #1a3a5a;
+            font-size: 0.85rem;
+        }
+
+        .cert-org {
+            color: #6a7e94;
+            font-size: 0.8rem;
+        }
+
+        .cert-year {
+            color: #2c6b9e;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        /* Contact */
+        .contact {
+            background-color: #f5f8fc;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .contact p {
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .contact a {
+            color: #2c6b9e;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Skills Section */
+        .skills {
+            margin-top: 1.5rem;
+            background-color: #f5f8fc;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .skills h3 {
+            font-size: 1rem;
+            color: #1a3a5a;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .skill-tag {
+            background-color: #e4ebf3;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: #1a3a5a;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid #eaecef;
+            font-size: 0.8rem;
+            color: #6a7e94;
+        }
+
+        .footer a {
+            color: #2c6b9e;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .main-content {
+                flex-direction: column;
+            }
+
+            .profile-img {
+                width: 140px;
+                height: 140px;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="experience.html">Works</a>
+            <a href="publications.html">Publications</a>
+            <a href="posts.html">Post Lists</a>
+            <a href="https://github.com/AbdulRehman-Material" target="_blank">GitHub</a>
+        </div>
+
+        <!-- Header - Centered with Larger Photo -->
+        <div class="header">
+            <img class="profile-img" src="profile.jpg" alt="Abdul Rehman" />
+            <h1>Abdul Rehman</h1>
+            <div class="title">Materials Engineer · Researcher · Aspiring PhD</div>
+            <div class="badges">
+                <a href="AbdulRehman_CV.pdf" class="badge" target="_blank" id="cvLink">CV (PDF)</a>
+                <a href="#" class="badge" id="linkedinLink">LinkedIn</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="left-column">
+                <!-- Bio Section - Updated with provided text -->
+                <div class="section">
+                    <p>I am a Materials Engineer with research and industrial experience in materials characterization, hydrometallurgy, manufacturing, and quality engineering. My work combines laboratory research with industrial quality control, focusing on sustainable metal extraction, manufacturing processes, materials inspection, and standards compliance. I am particularly interested in developing environmentally sustainable technologies for critical mineral recovery and advanced materials processing.</p>
+                </div>
+
+                <!-- News Section - Added webinar, removed all emojis -->
+                <div class="section">
+                    <h2>News</h2>
+                    <div class="news-item">
+                        <div class="news-date">Jul 2026</div>
+                        <div class="news-text">Attended webinar on <strong>Two-Dimensional Materials (MXenes)</strong>, exploring recent advances and applications.</div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">Nov 2024</div>
+                        <div class="news-text">Attended <strong>3rd International Conference on Trends and Research in Chemistry</strong> at University of Education.</div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">Feb 2024</div>
+                        <div class="news-text">Participated in <strong>3-Days Materials Characterization Workshops</strong> at University of the Punjab.</div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">Dec 2022</div>
+                        <div class="news-text">Attended <strong>Production and Operation Management Workshop</strong> at PITAC, SMEDA Regional Office.</div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">Nov 2022</div>
+                        <div class="news-text">Participated in <strong>All Punjab Universities Innovation</strong> organized by Punjab Higher Education Department.</div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">Sep 2022</div>
+                        <div class="news-text">Participated in <strong>1st Engineering Capstone</strong> organized by Pakistan Engineering Council.</div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">May 2022</div>
+                        <div class="news-text">Presented <strong>Final Year Project Poster</strong> at University of the Punjab <em>(Awarded 1st Position)</em>.</div>
+                    </div>
+                </div>
+
+                <!-- Selected Honors Section - removed emoji -->
+                <div class="section">
+                    <h2>Honors &amp; Awards</h2>
+                    <div class="honor-item">
+                        <div class="honor-title">1st Position - Final Year Poster Presentation</div>
+                        <div class="honor-detail">University of the Punjab, May 2022</div>
+                    </div>
+                </div>
+
+                <!-- Certifications Section - removed emoji -->
+                <div class="section">
+                    <h2>Certifications &amp; Courses</h2>
+                    <div class="cert-item">
+                        <div class="cert-name">AWS Solutions Architect Associate</div>
+                        <div class="cert-org">Amazon Web Services</div>
+                        <div class="cert-year">Oct 2024</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">FEM - Linear, Nonlinear Analysis &amp; Post Processing</div>
+                        <div class="cert-org">Coursera</div>
+                        <div class="cert-year">Mar 2024</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Electron and Ion Beam Characterization</div>
+                        <div class="cert-org">Coursera</div>
+                        <div class="cert-year">Mar 2024</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Simulation Analysis for Mechanical Engineers with Autodesk Fusion 360</div>
+                        <div class="cert-org">Coursera</div>
+                        <div class="cert-year">Apr 2023</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">AutoCAD</div>
+                        <div class="cert-org">Digiskills</div>
+                        <div class="cert-year">Jan 2023</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <!-- Contact Section - removed emoji -->
+                <div class="section">
+                    <h2>Contact</h2>
+                    <div class="contact">
+                        <p>engg.abdulrehman007 [at] gmail.com</p>
+                        <p><a href="https://linkedin.com/in/abalpha" target="_blank">LinkedIn</a> | <a href="https://github.com/AbdulRehman-Material" target="_blank">GitHub</a></p>
+                        <p>Lahore, Pakistan</p>
+                        <p><a href="AbdulRehman_CV.pdf" target="_blank" id="cvDownload">Download CV (PDF)</a></p>
+                    </div>
+                </div>
+
+                <!-- Education Section - removed emoji -->
+                <div class="section">
+                    <h2>Education</h2>
+                    <div class="honor-item">
+                        <div class="honor-title">B.S. in Metallurgy and Materials Engineering</div>
+                        <div class="honor-detail">University of the Punjab, 2018-2022</div>
+                    </div>
+                </div>
+
+                <!-- Technical Skills - removed emoji -->
+                <div class="skills">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">OriginPro</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">ANSYS</span>
+                        <span class="skill-tag">Fusion 360</span>
+                        <span class="skill-tag">AutoCAD</span>
+                        <span class="skill-tag">Materials Characterization</span>
+                        <span class="skill-tag">Quality Control</span>
+                        <span class="skill-tag">ASME Standards</span>
+                        <span class="skill-tag">Hydrometallurgy</span>
+                        <span class="skill-tag">Process Optimization</span>
+                    </div>
+                </div>
+
+                <!-- Research Interests - fully updated with provided list, no emoji -->
+                <div class="skills">
+                    <h3>Research Interests</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Hydrometallurgy</span>
+                        <span class="skill-tag">Critical Minerals</span>
+                        <span class="skill-tag">Battery Recycling</span>
+                        <span class="skill-tag">Metal Recovery</span>
+                        <span class="skill-tag">Advanced Materials</span>
+                        <span class="skill-tag">Composite Materials</span>
+                        <span class="skill-tag">Manufacturing Science</span>
+                        <span class="skill-tag">Materials Characterization</span>
+                        <span class="skill-tag">Electrochemical Processing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer - updated to 2026 -->
+        <div class="footer">
+            <p>&copy; 2026 Abdul Rehman &bull; abdulrehman-material.github.io</p>
+            <p>Last updated: July 2026</p>
+        </div>
+    </div>
+
+    <script>
+        // CV download links
+        document.getElementById('cvLink').href = "AbdulRehman_CV.pdf";
+        document.getElementById('cvDownload').href = "AbdulRehman_CV.pdf";
+
+        // LinkedIn link
+        document.getElementById('linkedinLink')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.open('https://linkedin.com/in/abalpha', '_blank');
+        });
+    </script>
+</body>
+</html>
